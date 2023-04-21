@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User{
+class User {
     public static var sharedUser = User()
     private var loggedIn = UserDefaults.standard.bool(forKey: "loggedIn")
     private var username = UserDefaults.standard.string(forKey: "username")

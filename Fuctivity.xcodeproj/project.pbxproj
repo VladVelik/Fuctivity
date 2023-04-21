@@ -33,7 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		441C1C7E29F2FB48002E4661 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		441C1C7E29F2FB48002E4661 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../RegisterAndSignInModule/User.swift; sourceTree = "<group>"; };
 		441C1C8029F2FBF0002E4661 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		441C1C8329F3087F002E4661 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		441C1C8629F30E78002E4661 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -71,13 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245A693029F324AA00179222 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				4CE07F75294266D5001458C7 /* SceneDelegate.swift */,
+				4CE07F73294266D5001458C7 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		441C1C7D29F2FB26002E4661 /* RegisterAndSignInModule */ = {
 			isa = PBXGroup;
 			children = (
 				4C43E11D294A1C4500A11C06 /* MainViewController.swift */,
 				4C43E11F294A1C5700A11C06 /* RegisterViewController.swift */,
 				4C43E121294A1C6100A11C06 /* LogInViewController.swift */,
-				441C1C7E29F2FB48002E4661 /* User.swift */,
 				441C1C8029F2FBF0002E4661 /* UserViewModel.swift */,
 			);
 			path = RegisterAndSignInModule;
@@ -127,6 +135,7 @@
 		4C012E74294528D500C9592C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				441C1C7E29F2FB48002E4661 /* User.swift */,
 				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
 			);
 			path = Models;
@@ -151,14 +160,13 @@
 		4CE07F72294266D5001458C7 /* Fuctivity */ = {
 			isa = PBXGroup;
 			children = (
+				245A693029F324AA00179222 /* Delegates */,
 				441C1C8529F30B8E002E4661 /* SettingsModule */,
 				441C1C8229F30868002E4661 /* RootModule */,
 				441C1C7D29F2FB26002E4661 /* RegisterAndSignInModule */,
 				4C012E74294528D500C9592C /* Models */,
 				4C012E73294528B800C9592C /* ViewControllers */,
 				4C012E72294528A300C9592C /* Extensions */,
-				4CE07F73294266D5001458C7 /* AppDelegate.swift */,
-				4CE07F75294266D5001458C7 /* SceneDelegate.swift */,
 				4CE07F7C294266D7001458C7 /* Assets.xcassets */,
 				4CE07F81294266D7001458C7 /* Info.plist */,
 			);
