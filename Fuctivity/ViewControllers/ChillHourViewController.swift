@@ -29,7 +29,7 @@ final class ChillHourViewController: UIViewController {
         setupDatePicker()
         
         currentDate = Date()
-        labelValue = ChillEvent.restHours
+        labelValue = Settings.sharedSettings.getRestHours()
         self.view.addSubview(hoursLabel)
         hoursLabel.text = "\(labelValue) ч. отдыха"
         hoursLabel.pinCenter(to: self.view.centerXAnchor)
@@ -109,7 +109,7 @@ final class ChillHourViewController: UIViewController {
         labelValue += 1
         hoursLabel.text = "\(labelValue) ч. отдыха"
         
-        if labelValue == ChillEvent.restHours {
+        if labelValue == Settings.sharedSettings.getRestHours() {
             buttonIncrease.isEnabled = false
         } else {
             buttonIncrease.isEnabled = true
@@ -131,7 +131,7 @@ final class ChillHourViewController: UIViewController {
             buttonDecrease.isEnabled = true
         }
         
-        if labelValue == ChillEvent.restHours - 1 {
+        if labelValue == Settings.sharedSettings.getRestHours() - 1 {
             buttonIncrease.isEnabled = true
         }
     }

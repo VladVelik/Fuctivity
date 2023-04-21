@@ -17,13 +17,6 @@ final class ChillEvent {
     public static var eventDescription: String = String()
     public static var eventStorage: [Event] = ChillEvent.getEvents()
     
-    public static var days: String = ""
-    
-    public static var username = UserDefaults.standard.string(forKey: "username")
-    public static var password = UserDefaults.standard.string(forKey: "password")
-    public static var email = UserDefaults.standard.string(forKey: "email")
-    
-    public static var restHours: Int = UserDefaults.standard.integer(forKey: "restHours")
     
     public static var eventNumber = UserDefaults.standard.integer(forKey: "eventNumber")
 
