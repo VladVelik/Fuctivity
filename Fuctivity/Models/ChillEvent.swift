@@ -19,23 +19,43 @@ final class ChillEvent {
     
     
     public static var eventNumber = UserDefaults.standard.integer(forKey: "eventNumber")
-
+    
     private static func getEvents() -> [Event] {
-        var list: [Event] = []
-        for i in 1...ChillEvent.eventNumber + 1 {
-            let event: Event = Event()
-            event.text = UserDefaults.standard.string(forKey: "eventText\(i)") ?? ""
+        let calendar = Calendar.current
+        let now = Date()
+        let startOfDay = calendar.startOfDay(for: now)
+        
+        var events: [Event] = []
+        
+        for day in -15...15 {
+            let eventDate = calendar.date(byAdding: .day, value: day, to: startOfDay)!
+            let startDate = eventDate.addingTimeInterval(TimeInterval(60 * 60 * 6))
+            let randomHour = Int.random(in: 0...12)
+            let endDate = startDate.addingTimeInterval(TimeInterval(60*60*randomHour))
+            
+            let event = Event()
+            event.text = "test"
             event.color = UIColor.UIColorFromRGB(rgbValue: 0xeb943d)
             event.lineBreakMode = .byTruncatingTail
-            
-            let obj1 = UserDefaults.standard.object(forKey: "startInterval\(i)")
-            let obj2 = UserDefaults.standard.object(forKey: "endInterval\(i)")
-
-            if obj1 != nil && obj2 != nil {
-                event.dateInterval = DateInterval(start: obj1 as! Date, end: obj2 as! Date)
-            }
-            list.append(event)
+            event.dateInterval = DateInterval(start: startDate, end: endDate)
+            events.append(event)
         }
-        return list
+        
+        return events
+        //        for i in 1...ChillEvent.eventNumber + 1 {
+        //            let event: Event = Event()
+        //            event.text = UserDefaults.standard.string(forKey: "eventText\(i)") ?? ""
+        //            event.color = UIColor.UIColorFromRGB(rgbValue: 0xeb943d)
+        //            event.lineBreakMode = .byTruncatingTail
+        //
+        //            let obj1 = UserDefaults.standard.object(forKey: "startInterval\(i)")
+        //            let obj2 = UserDefaults.standard.object(forKey: "endInterval\(i)")
+        //
+        //            if obj1 != nil && obj2 != nil {
+        //                event.dateInterval = DateInterval(start: obj1 as! Date, end: obj2 as! Date)
+        //            }
+        //            list.append(event)
+        //        }
+        //        return list
     }
 }

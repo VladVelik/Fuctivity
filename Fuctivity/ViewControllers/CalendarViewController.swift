@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 import CalendarKit
 import EventKit
+import SwiftUI
 
 final class CalendarViewController: DayViewController {
     // MARK: - Public Properties
     let chillHoursViewController = ChillHourViewController()
     let button = UIButton()
+    let buttonToStats = UIButton()
     
     // MARK: - Override Methods
     override func eventsForDate(_ date: Date) -> [EventDescriptor] {
@@ -24,7 +26,7 @@ final class CalendarViewController: DayViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.UIColorFromRGB(rgbValue: 0xeb943d)
         title = "Fuctivity"
-
+        
         setStyle()
         
         self.view.addSubview(button)
@@ -36,6 +38,15 @@ final class CalendarViewController: DayViewController {
         button.pinTop(to: self.dayView.dayHeaderView.bottomAnchor)
         button.pin(to: self.view, [.left: 0, .right: 0])
         getNotified()
+        
+        self.view.addSubview(buttonToStats)
+        buttonToStats.setTitle("Посмотреть статистику", for: .normal)
+        buttonToStats.setTitleColor(.white, for: .normal)
+        buttonToStats.addTarget(self, action: #selector(openStatistics), for: .touchUpInside)
+        buttonToStats.setHeight(to: 40)
+        buttonToStats.backgroundColor = UIColor.blue
+        buttonToStats.pinBottom(to: self.view.bottomAnchor)
+        buttonToStats.pin(to: self.view, [.left: 0, .right: 0])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,6 +77,12 @@ final class CalendarViewController: DayViewController {
     @objc
     public func setEvents() {
         self.navigationController?.pushViewController(self.chillHoursViewController, animated: true)
+    }
+    
+    @objc
+    private func openStatistics() {
+        let hostingController = UIHostingController(rootView: StatisticView())
+        self.navigationController?.pushViewController(hostingController, animated: true)        
     }
     
     //MARK: - Set style of storyboard
