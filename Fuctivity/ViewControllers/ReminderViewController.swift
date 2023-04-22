@@ -15,6 +15,7 @@ final class ReminderViewController: UIViewController {
     let continueButton = UIButton()
     let timeLabel = UILabel()
     let reminderLabel = UILabel()
+    private let viewModel = ChillEventViewModel()
     
     let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
@@ -72,13 +73,13 @@ final class ReminderViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        hourLabel.setTitle("\(ChillEvent.time) ч. отдыха", for: .normal)
+        hourLabel.setTitle(viewModel.getHours(), for: .normal)
     }
     
     // MARK: - private Methods
     private func setupHoursLabel() {
         self.view.addSubview(hourLabel)
-        hourLabel.setTitle("\(ChillEvent.time) ч. отдыха", for: .normal)
+        hourLabel.setTitle(viewModel.getHours(), for: .normal)
         hourLabel.setHeight(to: 40)
         hourLabel.setTitleColor(.white, for: .normal)
         hourLabel.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)

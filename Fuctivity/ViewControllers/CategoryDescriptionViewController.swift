@@ -18,6 +18,7 @@ final class CategoryDescriptionViewController: UIViewController {
     let createCategoryButton = UIButton()
     
     let reminderViewController = ReminderViewController()
+    private let viewModel = ChillEventViewModel()
     
     // MARK: - Override Methods
     override func viewDidLoad() {
@@ -33,7 +34,8 @@ final class CategoryDescriptionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        hourLabel.setTitle("\(ChillEvent.time) ч. отдыха", for: .normal)
+        hourLabel.setTitle(viewModel.getHours(), for: .normal)
+        
         textView.text = nil
         navigationController?.navigationBar.barStyle = UIBarStyle.default
     }
@@ -55,14 +57,14 @@ final class CategoryDescriptionViewController: UIViewController {
     private func continueAction() {
         self.navigationController?.pushViewController(self.reminderViewController, animated: true)
         
-        ChillEvent.eventDescription = textView.text
-        ChillEvent.categoryOfEvent = (categoryButton.titleLabel?.text)!
+        viewModel.saveEventDescription(textView.text)
+        viewModel.saveCategory(categoryButton.titleLabel?.text ?? "")
     }
     
     //MARK: - Private Methods
     private func setupHourInfoLabel() {
         self.view.addSubview(hourLabel)
-        hourLabel.setTitle("\(ChillEvent.time) ч. отдыха", for: .normal)
+        hourLabel.setTitle(viewModel.getHours(), for: .normal)
         hourLabel.setHeight(to: 40)
         hourLabel.setTitleColor(.white, for: .normal)
         hourLabel.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)

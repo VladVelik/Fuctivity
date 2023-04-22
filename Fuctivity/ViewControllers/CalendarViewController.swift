@@ -5,7 +5,6 @@
 //  Created by Федор Филиппов on 08.12.2022.
 //
 
-import Foundation
 import UIKit
 import CalendarKit
 import EventKit
@@ -17,9 +16,11 @@ final class CalendarViewController: DayViewController {
     let button = UIButton()
     let buttonToStats = UIButton()
     
+    private let viewModel = ChillEventViewModel()
+    
     // MARK: - Override Methods
     override func eventsForDate(_ date: Date) -> [EventDescriptor] {
-        return ChillEvent.eventStorage
+        return viewModel.getEventStorage()
     }
     
     override func viewDidLoad() {

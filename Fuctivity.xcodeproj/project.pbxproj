@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24CD2D3829F44B5400B6A508 /* ChillEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */; };
+		24CD2D3A29F4677500B6A508 /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */; };
 		441C1C7F29F2FB48002E4661 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C7E29F2FB48002E4661 /* User.swift */; };
 		441C1C8129F2FBF0002E4661 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C8029F2FBF0002E4661 /* UserViewModel.swift */; };
 		441C1C8429F3087F002E4661 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C8329F3087F002E4661 /* RootViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillEventViewModel.swift; sourceTree = "<group>"; };
+		24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
 		441C1C7E29F2FB48002E4661 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		441C1C8029F2FBF0002E4661 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		441C1C8329F3087F002E4661 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -129,10 +133,12 @@
 		4C012E73294528B800C9592C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
 				4CE07F892942720B001458C7 /* CalendarViewController.swift */,
+				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
 				4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */,
 				4CD51F9A2945D863007581CF /* ReminderViewController.swift */,
+				24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */,
+				24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				4C43E124294A1C6A00A11C06 /* DayChooseViewController.swift in Sources */,
 				441C1C8129F2FBF0002E4661 /* UserViewModel.swift in Sources */,
 				441C1C7F29F2FB48002E4661 /* User.swift in Sources */,
+				24CD2D3A29F4677500B6A508 /* ReminderViewModel.swift in Sources */,
 				4CE07F8829426F86001458C7 /* UIViewPin.swift in Sources */,
 				4C43E122294A1C6100A11C06 /* LogInViewController.swift in Sources */,
 				4CE07F76294266D5001458C7 /* SceneDelegate.swift in Sources */,
@@ -284,6 +291,7 @@
 				441C1C8929F30F5C002E4661 /* Settings.swift in Sources */,
 				72E5872B29F40922003DBDF3 /* StatisticsView.swift in Sources */,
 				4C012E6D2944DAC300C9592C /* ChillEvent.swift in Sources */,
+				24CD2D3829F44B5400B6A508 /* ChillEventViewModel.swift in Sources */,
 				4C43E128294A1C7C00A11C06 /* ChooseHoursViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
