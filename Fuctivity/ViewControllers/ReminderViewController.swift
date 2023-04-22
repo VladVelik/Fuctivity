@@ -16,6 +16,7 @@ final class ReminderViewController: UIViewController {
     let timeLabel = UILabel()
     let reminderLabel = UILabel()
     private let viewModel = ChillEventViewModel()
+    private let rViewModel = ReminderViewModel()
     
     let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
@@ -151,7 +152,7 @@ final class ReminderViewController: UIViewController {
         
         UserDefaults.standard.set(ChillEvent.eventNumber, forKey: "eventNumber")
         
-        createNotification(day: Int(day)!,
+        rViewModel.createNotification(day: Int(day)!,
                            month: Int(month)!,
                            year: Int(year)!,
                            hour: startTimePicker.calendar.component(.hour, from: startTimePicker.date),
@@ -159,7 +160,7 @@ final class ReminderViewController: UIViewController {
                            title: "Время отдыхать!",
                            body: "Думаем, вы уже хорошо поработали. А на сейчас запланирован отдых!")
         
-        createNotification(day: Int(day)!,
+        rViewModel.createNotification(day: Int(day)!,
                            month: Int(month)!,
                            year: Int(year)!,
                            hour: reminderTimePicker.calendar.component(.hour, from: reminderTimePicker.date),
@@ -168,41 +169,6 @@ final class ReminderViewController: UIViewController {
                            body: "Оцените текущий отдых для создания статистики")
         
         navigationController?.popToRootViewController(animated: true)
-    }
-    
-    private func createNotification(day: Int,
-                                    month: Int,
-                                    year: Int,
-                                    hour: Int,
-                                    minute: Int,
-                                    title: String,
-                                    body: String) {
-        
-        let content = UNMutableNotificationContent()
-        content.title = NSString.localizedUserNotificationString(forKey: title, arguments: nil)
-        content.body = NSString.localizedUserNotificationString(forKey: body, arguments: nil)
-        content.sound = UNNotificationSound.default
-        content.badge = 1
-        let identifier = UUID().uuidString
-
-        var dateInfo = DateComponents()
-        dateInfo.day = day
-        dateInfo.month = month
-        dateInfo.year = year
-        dateInfo.hour = hour
-        dateInfo.minute = minute
-            
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: false)
-            
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        let center = UNUserNotificationCenter.current()
-        center.add(request) { (error) in
-            if let error = error {
-                print("Error \(error.localizedDescription)")
-            } else{
-                print("send!!")
-            }
-        }
     }
     
     private func setupLabels() {
