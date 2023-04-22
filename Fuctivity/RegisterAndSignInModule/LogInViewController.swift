@@ -74,7 +74,7 @@ final class LogInViewController: UIViewController {
             self.navigationController?.pushViewController(calendarViewController, animated: true)
         }
         else{
-            let dialog = UIAlertController(title:"Пользоатель не найден", message:"Неверно введены данные для входа",
+            let dialog = UIAlertController(title:"Пользователь не найден", message:"Неверно введены данные для входа",
                                            preferredStyle: .alert)
             let okAction = UIAlertAction(title:"OK", style: .default, handler: {(alert:UIAlertAction!)-> Void in})
             dialog.addAction(okAction)

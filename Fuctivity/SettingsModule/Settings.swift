@@ -18,17 +18,15 @@ class Settings{
     
     public func setRestHours(restHours: Int){
         self.restHours = restHours
-        UserDefaults.standard.set(self.restHours, forKey: "restHours")
+        
     }
     
     public func setWorkHours(workHours: Int){
         self.workHours = workHours
-        UserDefaults.standard.set(self.workHours, forKey: "workHours")
     }
     
     public func setDays(days: String){
         self.days = days
-        UserDefaults.standard.set(self.days, forKey: "workDays")
     }
     
     public func getRestHours() -> Int{

@@ -51,23 +51,13 @@ final class ChooseRestViewController: UIViewController {
     @objc
     private func plusTextField() {
         let special = Int(textField.text ?? "") ?? 6
-        if special > 10 {
-            textField.text = "6"
-        }
-        if special >= 0 && special < 10 {
-            textField.text = String(special + 1)
-        }
+        textField.text = settingsViewModel.plusRestHours(restHours: special)
     }
     
     @objc
     private func minusTextField() {
         let special = Int(textField.text ?? "") ?? 6
-        if special > 10 {
-            textField.text = "6"
-        }
-        if special > 2 && special < 11 {
-            textField.text = String(special - 1)
-        }
+        textField.text = settingsViewModel.minusRestHours(restHours: special)
     }
     
     @objc

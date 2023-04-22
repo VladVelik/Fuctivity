@@ -56,23 +56,13 @@ final class ChooseHoursViewController: UIViewController {
     @objc
     private func plusTextField() {
         let special = Int(textField.text ?? "") ?? 8
-        if special > 12 {
-            textField.text = "8"
-        }
-        if special >= 0 && special < 12 {
-            textField.text = String(special + 1)
-        }
+        textField.text = settingsViewModel.plusWorkHours(workHours: special)
     }
     
     @objc
     private func minusTextField() {
         let special = Int(textField.text ?? "") ?? 8
-        if special > 12 {
-            textField.text = "8"
-        }
-        if special > 2 && special < 13 {
-            textField.text = String(special - 1)
-        }
+        textField.text = settingsViewModel.minusWorkHours(workHours: special)
     }
     
     // MARK: - Private Methods (place certain items on the storyboard)

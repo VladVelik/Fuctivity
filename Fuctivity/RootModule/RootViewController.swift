@@ -14,12 +14,12 @@ class RootViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if !UserDefaults.standard.bool(forKey: "loggedIn"){
+        //if !UserDefaults.standard.bool(forKey: "loggedIn"){
             current = MainViewController()
-        }
-        else{
-            current = CalendarViewController()
-        }
+        //}
+        //else{
+        //    current = CalendarViewController()
+        //}
         
         addChild(current)
         current.view.frame = view.bounds

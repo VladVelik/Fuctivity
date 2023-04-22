@@ -33,7 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		441C1C7E29F2FB48002E4661 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../RegisterAndSignInModule/User.swift; sourceTree = "<group>"; };
+		441C1C7E29F2FB48002E4661 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		441C1C8029F2FBF0002E4661 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		441C1C8329F3087F002E4661 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		441C1C8629F30E78002E4661 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +83,7 @@
 		441C1C7D29F2FB26002E4661 /* RegisterAndSignInModule */ = {
 			isa = PBXGroup;
 			children = (
+				441C1C7E29F2FB48002E4661 /* User.swift */,
 				4C43E11D294A1C4500A11C06 /* MainViewController.swift */,
 				4C43E11F294A1C5700A11C06 /* RegisterViewController.swift */,
 				4C43E121294A1C6100A11C06 /* LogInViewController.swift */,
@@ -135,7 +136,6 @@
 		4C012E74294528D500C9592C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				441C1C7E29F2FB48002E4661 /* User.swift */,
 				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
 			);
 			path = Models;
