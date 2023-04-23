@@ -130,25 +130,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4C012E73294528B800C9592C /* ViewControllers */ = {
+		4C012E73294528B800C9592C /* CalendarModule */ = {
 			isa = PBXGroup;
 			children = (
 				4CE07F892942720B001458C7 /* CalendarViewController.swift */,
-				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
-				4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */,
-				4CD51F9A2945D863007581CF /* ReminderViewController.swift */,
-				24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */,
-				24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */,
 			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		4C012E74294528D500C9592C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
-			);
-			path = Models;
+			path = CalendarModule;
 			sourceTree = "<group>";
 		};
 		4CE07F67294266D5001458C7 = {
@@ -170,13 +157,13 @@
 		4CE07F72294266D5001458C7 /* Fuctivity */ = {
 			isa = PBXGroup;
 			children = (
-				72E5872929F408C6003DBDF3 /* StatisticsModule */,
 				245A693029F324AA00179222 /* Delegates */,
-				441C1C8529F30B8E002E4661 /* SettingsModule */,
 				441C1C8229F30868002E4661 /* RootModule */,
 				441C1C7D29F2FB26002E4661 /* RegisterAndSignInModule */,
-				4C012E74294528D500C9592C /* Models */,
-				4C012E73294528B800C9592C /* ViewControllers */,
+				441C1C8529F30B8E002E4661 /* SettingsModule */,
+				4C012E73294528B800C9592C /* CalendarModule */,
+				72E5873029F58995003DBDF3 /* CreateNewEventModule */,
+				72E5872929F408C6003DBDF3 /* StatisticsModule */,
 				4C012E72294528A300C9592C /* Extensions */,
 				4CE07F7C294266D7001458C7 /* Assets.xcassets */,
 				4CE07F81294266D7001458C7 /* Info.plist */,
@@ -191,6 +178,19 @@
 				72E5872C29F40953003DBDF3 /* StatisticsViewModel.swift */,
 			);
 			path = StatisticsModule;
+			sourceTree = "<group>";
+		};
+		72E5873029F58995003DBDF3 /* CreateNewEventModule */ = {
+			isa = PBXGroup;
+			children = (
+				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
+				24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */,
+				24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */,
+				4CD51F9A2945D863007581CF /* ReminderViewController.swift */,
+				4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */,
+				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
+			);
+			path = CreateNewEventModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

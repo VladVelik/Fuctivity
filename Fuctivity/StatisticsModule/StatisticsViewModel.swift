@@ -11,6 +11,7 @@ import CalendarKit
 
 class StatisticsViewModel: ObservableObject {
     @Published var data: [DailyDuration] = []
+    private var currentUser = UserViewModel.shared.currentUser
     
     func updateData() {
         getDailyDurations(week: 0)
@@ -25,7 +26,7 @@ class StatisticsViewModel: ObservableObject {
 
     // Получение общей продолжительности событий для каждого дня недели для выбранной недели, где 0 - текущая неделя
     func getDailyDurations(week: Int) {
-        let events = ChillEvent.eventStorage // Assuming ChillEvent.eventStorage contains the events
+        let events = currentUser.eventStorage
         
         let calendar = Calendar.current
         let now = Date()

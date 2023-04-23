@@ -35,10 +35,6 @@ final class ChillEventViewModel {
     }
     
     // MARK: - Public Methods
-    func getEventStorage() -> [Event] {
-        return ChillEvent.eventStorage
-    }
-    
     func saveEventDescription(_ textView: String) {
         ChillEvent.eventDescription = textView
     }

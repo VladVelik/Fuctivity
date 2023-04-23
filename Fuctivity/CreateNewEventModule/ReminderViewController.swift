@@ -141,7 +141,7 @@ final class ReminderViewController: UIViewController {
         event.color = UIColor.UIColorFromRGB(rgbValue: 0xeb943d)
         event.lineBreakMode = .byTruncatingTail
 
-        ChillEvent.eventStorage.append(event)
+        UserViewModel.shared.currentUser.addEvent(event)
         
         ChillEvent.eventNumber += 1
         

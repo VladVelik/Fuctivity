@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import CalendarKit
+import UIKit
 
 class User {
     private var loggedIn = UserDefaults.standard.bool(forKey: "loggedIn")
@@ -13,7 +15,7 @@ class User {
     private var hashPassword = UserDefaults.standard.string(forKey: "password") ?? ""
     private var email = UserDefaults.standard.string(forKey: "email") ?? ""
     private var settings: Settings = Settings.sharedSettings
-    
+    private(set) var eventStorage: [Event] = []
     
     public func register(username: String, password: String, email: String){
         self.username = username
@@ -40,5 +42,13 @@ class User {
     
     public func getEmail() -> String{
         return self.email
+    }
+    
+    public func setEvents(_ events: [Event]) {
+        self.eventStorage = events
+    }
+    
+    public func addEvent(_ event: Event) {
+        self.eventStorage.append(event)
     }
 }

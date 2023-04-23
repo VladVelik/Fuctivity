@@ -20,7 +20,7 @@ final class CalendarViewController: DayViewController {
     
     // MARK: - Override Methods
     override func eventsForDate(_ date: Date) -> [EventDescriptor] {
-        return viewModel.getEventStorage()
+        return UserViewModel.shared.currentUser.eventStorage
     }
     
     override func viewDidLoad() {

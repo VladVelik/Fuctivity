@@ -26,6 +26,7 @@ final class DayChooseViewController: UIViewController {
     // MARK: - Override Method
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UserViewModel.shared.currentUser.getEmail())
         buttonsColumnSize = Int(view.frame.size.width / 5.5)
         betweenButtonsDistance = Int(view.frame.size.width / 17.2)
         navigationItem.setHidesBackButton(true, animated: true)
