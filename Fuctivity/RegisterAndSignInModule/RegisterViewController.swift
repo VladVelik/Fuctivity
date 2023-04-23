@@ -18,7 +18,7 @@ final class RegisterViewController: UIViewController {
     var emailTextField = UITextField()
     var passwordTextField = UITextField()
     
-    var userViewModel = UserViewModel()
+    var userViewModel = UserViewModel.shared
     
     // MARK: - Override Method
     override func viewDidLoad() {
