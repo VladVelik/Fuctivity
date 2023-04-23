@@ -45,8 +45,6 @@ final class ReminderViewController: UIViewController {
         datePicker.tintColor = .orange
         datePicker.backgroundColor = UIColor.UIColorFromRGB(rgbValue: 0xf1ebfa)
         
-        datePicker.date = Calendar.current.date(byAdding: .hour, value: ChillEvent.time, to: Date())!
-        
         return datePicker
     }()
     
@@ -69,17 +67,18 @@ final class ReminderViewController: UIViewController {
         setupContinueButton()
         setupLabels()
         setupDatePicker()
+        datePicker.date = Calendar.current.date(byAdding: .hour, value: viewModel.getHours(), to: Date())!
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        hourLabel.setTitle(viewModel.getHours(), for: .normal)
+        hourLabel.setTitle("\(viewModel.getHours()) ч. отдыха", for: .normal)
     }
     
     // MARK: - private Methods
     private func setupHoursLabel() {
         self.view.addSubview(hourLabel)
-        hourLabel.setTitle(viewModel.getHours(), for: .normal)
+        hourLabel.setTitle("\(viewModel.getHours()) ч. отдыха", for: .normal)
         hourLabel.setHeight(to: 40)
         hourLabel.setTitleColor(.white, for: .normal)
         hourLabel.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)

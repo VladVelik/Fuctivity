@@ -43,8 +43,8 @@ final class ChillEventViewModel {
         ChillEvent.categoryOfEvent = textView
     }
     
-    func getHours() -> String {
-        return "\(ChillEvent.time) ч. отдыха"
+    func getHours() -> Int {
+        return ChillEvent.time
     }
     
     func increaseHours() {

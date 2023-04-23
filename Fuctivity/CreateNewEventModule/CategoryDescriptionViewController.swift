@@ -34,7 +34,7 @@ final class CategoryDescriptionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        hourLabel.setTitle(viewModel.getHours(), for: .normal)
+        hourLabel.setTitle("\(viewModel.getHours()) ч. отдыха", for: .normal)
         
         textView.text = nil
         navigationController?.navigationBar.barStyle = UIBarStyle.default
@@ -64,7 +64,7 @@ final class CategoryDescriptionViewController: UIViewController {
     //MARK: - Private Methods
     private func setupHourInfoLabel() {
         self.view.addSubview(hourLabel)
-        hourLabel.setTitle(viewModel.getHours(), for: .normal)
+        hourLabel.setTitle("\(viewModel.getHours()) ч. отдыха", for: .normal)
         hourLabel.setHeight(to: 40)
         hourLabel.setTitleColor(.white, for: .normal)
         hourLabel.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
