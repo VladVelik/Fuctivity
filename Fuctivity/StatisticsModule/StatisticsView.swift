@@ -98,7 +98,7 @@ struct StatisticView: View {
         }
         .chartXAxis {
             AxisMarks(values: .automatic(desiredCount: 7)) { _ in
-                AxisValueLabel(format: .dateTime.weekday())
+                AxisValueLabel(format: .dateTime.weekday(), centered: true)
                     .foregroundStyle(Color.black)
                 AxisTick()
                 AxisGridLine()
