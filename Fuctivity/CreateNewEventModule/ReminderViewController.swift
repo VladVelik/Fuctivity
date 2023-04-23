@@ -5,7 +5,6 @@
 //  Created by Федор Филиппов on 11.12.2022.
 //
 
-import Foundation
 import UIKit
 import CalendarKit
 
@@ -105,69 +104,7 @@ final class ReminderViewController: UIViewController {
     
     @objc
     private func continueAction() {
-        var formatter = DateFormatter()
-
-        let date = datePicker.date
-        formatter.dateFormat = "yyyy"
-        let year = formatter.string(from: date)
-        formatter.dateFormat = "MM"
-        let month = formatter.string(from: date)
-        formatter.dateFormat = "dd"
-        var day = formatter.string(from: date)
-
-        let event = Event()
-
-        // TODO: fix next day event bug
-        formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        let someDateTimeStart = formatter
-            .date(from: "\(year)/\(month)/\(day) \(startTimePicker.calendar.component(.hour, from: startTimePicker.date)):\(startTimePicker.calendar.component(.minute, from: startTimePicker.date))")!
-        
-        let endHour = (startTimePicker.calendar.component(.hour, from: startTimePicker.date) + ChillEvent.time)
-        
-        if endHour > 24 {
-            let increment = endHour / 24
-            let dayInt = Int(day)! + increment
-            
-            day = String(dayInt)
-        }
-
-        let someDateTimeEnd = formatter
-            .date(from: "\(year)/\(month)/\(day) \(endHour % 24):\(startTimePicker.calendar.component(.minute, from: startTimePicker.date))")!
-
-        event.dateInterval = DateInterval(start: someDateTimeStart, end: someDateTimeEnd)
-
-        event.text = ChillEvent.eventDescription
-        event.color = UIColor.UIColorFromRGB(rgbValue: 0xeb943d)
-        event.lineBreakMode = .byTruncatingTail
-
-        UserViewModel.shared.currentUser.addEvent(event)
-        
-        ChillEvent.eventNumber += 1
-        
-        UserDefaults.standard.set(event.text, forKey: "eventText\(ChillEvent.eventNumber)")
-        
-        UserDefaults.standard.set(event.dateInterval.start, forKey: "startInterval\(ChillEvent.eventNumber)")
-        UserDefaults.standard.set(event.dateInterval.end, forKey: "endInterval\(ChillEvent.eventNumber)")
-        
-        UserDefaults.standard.set(ChillEvent.eventNumber, forKey: "eventNumber")
-        
-        rViewModel.createNotification(day: Int(day)!,
-                           month: Int(month)!,
-                           year: Int(year)!,
-                           hour: startTimePicker.calendar.component(.hour, from: startTimePicker.date),
-                           minute: startTimePicker.calendar.component(.minute, from: startTimePicker.date),
-                           title: "Время отдыхать!",
-                           body: "Думаем, вы уже хорошо поработали. А на сейчас запланирован отдых!")
-        
-        rViewModel.createNotification(day: Int(day)!,
-                           month: Int(month)!,
-                           year: Int(year)!,
-                           hour: reminderTimePicker.calendar.component(.hour, from: reminderTimePicker.date),
-                           minute: reminderTimePicker.calendar.component(.minute, from: reminderTimePicker.date),
-                           title: "Надеюсь, вы хорошо проводите время!",
-                           body: "Оцените текущий отдых для создания статистики")
-        
+        rViewModel.continueAction(datePicker, startTimePicker, reminderTimePicker)
         navigationController?.popToRootViewController(animated: true)
     }
     
