@@ -55,6 +55,14 @@ final class ChillEventViewModel {
         labelValue -= 1
     }
     
+    func setTime() {
+        ChillEvent.time = labelValue
+    }
+    
+    func setDate() {
+        ChillEvent.date = dateLabelText
+    }
+    
     func nextDay() {
         let daysToAdd = 1
         var dateComponent = DateComponents()
