@@ -8,21 +8,21 @@
 import Foundation
 import CryptoKit
 class UserViewModel{
-    
+    static private(set) var currentUser: User = User()
     
     public func login(username: String, password: String, email: String){
         let hashpassword = passwordHash(email: email, password: password)
-        if User.sharedUser.getUsername() == username && User.sharedUser.getHashPassword() == hashpassword && User.sharedUser.getEmail() == email{
-            User.sharedUser.setLoggedIn(logIn: true)
+        if UserViewModel.currentUser.getUsername() == username && UserViewModel.currentUser.getHashPassword() == hashpassword && UserViewModel.currentUser.getEmail() == email{
+            UserViewModel.currentUser.setLoggedIn(logIn: true)
             UserDefaults.standard.set(true, forKey: "loggedIn")
         }
         else{
-            User.sharedUser.setLoggedIn(logIn: false)
+            UserViewModel.currentUser.setLoggedIn(logIn: false)
             UserDefaults.standard.set(false, forKey: "loggedIn")
         }
     }
     public func isLogin() -> Bool{
-        return User.sharedUser.getIsLogged()
+        return UserViewModel.currentUser.getIsLogged()
     }
     
     public func register(username: String, password: String, email: String){
@@ -34,7 +34,7 @@ class UserViewModel{
         UserDefaults.standard.set(username, forKey: "username")
         UserDefaults.standard.set(hashpassword, forKey: "password")
         UserDefaults.standard.set(email, forKey: "email")
-        User.sharedUser.register(username: username, password: hashpassword, email: email)
+        UserViewModel.currentUser.register(username: username, password: hashpassword, email: email)
     }
     
     func passwordHash(email: String, password: String) -> String {

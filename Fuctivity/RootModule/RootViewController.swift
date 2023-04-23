@@ -15,10 +15,10 @@ class RootViewController: UIViewController{
         super.viewDidLoad()
         
         //if !UserDefaults.standard.bool(forKey: "loggedIn"){
-            current = MainViewController()
+//            current = MainViewController()
         //}
         //else{
-        //    current = CalendarViewController()
+            current = CalendarViewController()
         //}
         
         addChild(current)

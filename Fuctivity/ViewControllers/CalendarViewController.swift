@@ -54,9 +54,9 @@ final class CalendarViewController: DayViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.barStyle = UIBarStyle.black
         
-        if !Settings.sharedSettings.getDays().contains(String(Calendar.current.component(.weekday, from: self.dayView.state!.selectedDate))) {
-            button.removeFromSuperview()
-        }
+//        if !Settings.sharedSettings.getDays().contains(String(Calendar.current.component(.weekday, from: self.dayView.state!.selectedDate))) {
+//            button.removeFromSuperview()
+//        }
         dayView.autoScrollToFirstEvent = true
         getNotified()
         reloadData()

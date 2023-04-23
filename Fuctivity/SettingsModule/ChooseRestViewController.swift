@@ -68,7 +68,7 @@ final class ChooseRestViewController: UIViewController {
             UserDefaults.standard.removePersistentDomain(forName: appDomain)
         }
         
-        ChillEvent.eventStorage = []
+//        ChillEvent.eventStorage = []
         
         
         self.navigationController?.pushViewController(calendarViewController, animated: true)

@@ -8,7 +8,6 @@
 import Foundation
 
 class User {
-    public static var sharedUser = User()
     private var loggedIn = UserDefaults.standard.bool(forKey: "loggedIn")
     private var username = UserDefaults.standard.string(forKey: "username") ?? ""
     private var hashPassword = UserDefaults.standard.string(forKey: "password") ?? ""
