@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24CD2D3829F44B5400B6A508 /* ChillEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */; };
+		24CD2D3A29F4677500B6A508 /* ReminderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */; };
+		441C1C7F29F2FB48002E4661 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C7E29F2FB48002E4661 /* User.swift */; };
+		441C1C8129F2FBF0002E4661 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C8029F2FBF0002E4661 /* UserViewModel.swift */; };
+		441C1C8429F3087F002E4661 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C8329F3087F002E4661 /* RootViewController.swift */; };
+		441C1C8729F30E78002E4661 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C8629F30E78002E4661 /* SettingsViewModel.swift */; };
+		441C1C8929F30F5C002E4661 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441C1C8829F30F5B002E4661 /* Settings.swift */; };
+		4452781C29C6434900169BE2 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4452781B29C6434900169BE2 /* CalendarKit */; };
 		4C012E692944A53800C9592C /* ChillHourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C012E682944A53800C9592C /* ChillHourViewController.swift */; };
 		4C012E6D2944DAC300C9592C /* ChillEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C012E6C2944DAC300C9592C /* ChillEvent.swift */; };
 		4C012E712944F04000C9592C /* CategoryDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */; };
@@ -24,10 +32,18 @@
 		4CE07F7D294266D7001458C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE07F7C294266D7001458C7 /* Assets.xcassets */; };
 		4CE07F8829426F86001458C7 /* UIViewPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE07F8729426F86001458C7 /* UIViewPin.swift */; };
 		4CE07F8A2942720B001458C7 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE07F892942720B001458C7 /* CalendarViewController.swift */; };
-		4CE07F8D2942751C001458C7 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4CE07F8C2942751C001458C7 /* CalendarKit */; };
+		72E5872B29F40922003DBDF3 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5872A29F40922003DBDF3 /* StatisticsView.swift */; };
+		72E5872D29F40953003DBDF3 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E5872C29F40953003DBDF3 /* StatisticsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillEventViewModel.swift; sourceTree = "<group>"; };
+		24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewModel.swift; sourceTree = "<group>"; };
+		441C1C7E29F2FB48002E4661 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		441C1C8029F2FBF0002E4661 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		441C1C8329F3087F002E4661 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		441C1C8629F30E78002E4661 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		441C1C8829F30F5B002E4661 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4C012E682944A53800C9592C /* ChillHourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillHourViewController.swift; sourceTree = "<group>"; };
 		4C012E6C2944DAC300C9592C /* ChillEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillEvent.swift; sourceTree = "<group>"; };
 		4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDescriptionViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +63,8 @@
 		4CE07F81294266D7001458C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CE07F8729426F86001458C7 /* UIViewPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewPin.swift; sourceTree = "<group>"; };
 		4CE07F892942720B001458C7 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		72E5872A29F40922003DBDF3 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		72E5872C29F40953003DBDF3 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +72,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE07F8D2942751C001458C7 /* CalendarKit in Frameworks */,
+				4452781C29C6434900169BE2 /* CalendarKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		245A693029F324AA00179222 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				4CE07F75294266D5001458C7 /* SceneDelegate.swift */,
+				4CE07F73294266D5001458C7 /* AppDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		441C1C7D29F2FB26002E4661 /* RegisterAndSignInModule */ = {
+			isa = PBXGroup;
+			children = (
+				441C1C7E29F2FB48002E4661 /* User.swift */,
+				4C43E11D294A1C4500A11C06 /* MainViewController.swift */,
+				4C43E11F294A1C5700A11C06 /* RegisterViewController.swift */,
+				4C43E121294A1C6100A11C06 /* LogInViewController.swift */,
+				441C1C8029F2FBF0002E4661 /* UserViewModel.swift */,
+			);
+			path = RegisterAndSignInModule;
+			sourceTree = "<group>";
+		};
+		441C1C8229F30868002E4661 /* RootModule */ = {
+			isa = PBXGroup;
+			children = (
+				441C1C8329F3087F002E4661 /* RootViewController.swift */,
+			);
+			path = RootModule;
+			sourceTree = "<group>";
+		};
+		441C1C8529F30B8E002E4661 /* SettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				4C43E123294A1C6A00A11C06 /* DayChooseViewController.swift */,
+				4C43E125294A1C7400A11C06 /* ChooseRestViewController.swift */,
+				4C43E127294A1C7C00A11C06 /* ChooseHoursViewController.swift */,
+				441C1C8629F30E78002E4661 /* SettingsViewModel.swift */,
+				441C1C8829F30F5B002E4661 /* Settings.swift */,
+			);
+			path = SettingsModule;
+			sourceTree = "<group>";
+		};
 		4C012E72294528A300C9592C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,29 +130,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4C012E73294528B800C9592C /* ViewControllers */ = {
+		4C012E73294528B800C9592C /* CalendarModule */ = {
 			isa = PBXGroup;
 			children = (
-				4C43E127294A1C7C00A11C06 /* ChooseHoursViewController.swift */,
-				4C43E125294A1C7400A11C06 /* ChooseRestViewController.swift */,
-				4C43E123294A1C6A00A11C06 /* DayChooseViewController.swift */,
-				4C43E121294A1C6100A11C06 /* LogInViewController.swift */,
-				4C43E11F294A1C5700A11C06 /* RegisterViewController.swift */,
-				4C43E11D294A1C4500A11C06 /* MainViewController.swift */,
 				4CE07F892942720B001458C7 /* CalendarViewController.swift */,
-				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
-				4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */,
-				4CD51F9A2945D863007581CF /* ReminderViewController.swift */,
 			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		4C012E74294528D500C9592C /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
-			);
-			path = Models;
+			path = CalendarModule;
 			sourceTree = "<group>";
 		};
 		4CE07F67294266D5001458C7 = {
@@ -115,15 +157,40 @@
 		4CE07F72294266D5001458C7 /* Fuctivity */ = {
 			isa = PBXGroup;
 			children = (
-				4C012E74294528D500C9592C /* Models */,
-				4C012E73294528B800C9592C /* ViewControllers */,
+				245A693029F324AA00179222 /* Delegates */,
+				441C1C8229F30868002E4661 /* RootModule */,
+				441C1C7D29F2FB26002E4661 /* RegisterAndSignInModule */,
+				441C1C8529F30B8E002E4661 /* SettingsModule */,
+				4C012E73294528B800C9592C /* CalendarModule */,
+				72E5873029F58995003DBDF3 /* CreateNewEventModule */,
+				72E5872929F408C6003DBDF3 /* StatisticsModule */,
 				4C012E72294528A300C9592C /* Extensions */,
-				4CE07F73294266D5001458C7 /* AppDelegate.swift */,
-				4CE07F75294266D5001458C7 /* SceneDelegate.swift */,
 				4CE07F7C294266D7001458C7 /* Assets.xcassets */,
 				4CE07F81294266D7001458C7 /* Info.plist */,
 			);
 			path = Fuctivity;
+			sourceTree = "<group>";
+		};
+		72E5872929F408C6003DBDF3 /* StatisticsModule */ = {
+			isa = PBXGroup;
+			children = (
+				72E5872A29F40922003DBDF3 /* StatisticsView.swift */,
+				72E5872C29F40953003DBDF3 /* StatisticsViewModel.swift */,
+			);
+			path = StatisticsModule;
+			sourceTree = "<group>";
+		};
+		72E5873029F58995003DBDF3 /* CreateNewEventModule */ = {
+			isa = PBXGroup;
+			children = (
+				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
+				24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */,
+				24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */,
+				4CD51F9A2945D863007581CF /* ReminderViewController.swift */,
+				4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */,
+				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
+			);
+			path = CreateNewEventModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +210,7 @@
 			);
 			name = Fuctivity;
 			packageProductDependencies = (
-				4CE07F8C2942751C001458C7 /* CalendarKit */,
+				4452781B29C6434900169BE2 /* CalendarKit */,
 			);
 			productName = Fuctivity;
 			productReference = 4CE07F70294266D5001458C7 /* Fuctivity.app */;
@@ -174,7 +241,7 @@
 			);
 			mainGroup = 4CE07F67294266D5001458C7;
 			packageReferences = (
-				4CE07F8B2942751C001458C7 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+				4452781A29C6434900169BE2 /* XCRemoteSwiftPackageReference "CalendarKit" */,
 			);
 			productRefGroup = 4CE07F71294266D5001458C7 /* Products */;
 			projectDirPath = "";
@@ -203,19 +270,28 @@
 			files = (
 				4CE07F8A2942720B001458C7 /* CalendarViewController.swift in Sources */,
 				4C43E126294A1C7400A11C06 /* ChooseRestViewController.swift in Sources */,
+				441C1C8429F3087F002E4661 /* RootViewController.swift in Sources */,
 				4C43E12A294A1CA400A11C06 /* PinElementsExtension.swift in Sources */,
 				4C43E11E294A1C4500A11C06 /* MainViewController.swift in Sources */,
 				4C012E712944F04000C9592C /* CategoryDescriptionViewController.swift in Sources */,
 				4CE07F74294266D5001458C7 /* AppDelegate.swift in Sources */,
 				4C43E124294A1C6A00A11C06 /* DayChooseViewController.swift in Sources */,
+				441C1C8129F2FBF0002E4661 /* UserViewModel.swift in Sources */,
+				441C1C7F29F2FB48002E4661 /* User.swift in Sources */,
+				24CD2D3A29F4677500B6A508 /* ReminderViewModel.swift in Sources */,
 				4CE07F8829426F86001458C7 /* UIViewPin.swift in Sources */,
 				4C43E122294A1C6100A11C06 /* LogInViewController.swift in Sources */,
 				4CE07F76294266D5001458C7 /* SceneDelegate.swift in Sources */,
 				4C43E120294A1C5700A11C06 /* RegisterViewController.swift in Sources */,
 				4C2F8C20294BB56A0019BEF1 /* ColorFromHexExtension.swift in Sources */,
+				72E5872D29F40953003DBDF3 /* StatisticsViewModel.swift in Sources */,
+				441C1C8729F30E78002E4661 /* SettingsViewModel.swift in Sources */,
 				4CD51F9B2945D863007581CF /* ReminderViewController.swift in Sources */,
 				4C012E692944A53800C9592C /* ChillHourViewController.swift in Sources */,
+				441C1C8929F30F5C002E4661 /* Settings.swift in Sources */,
+				72E5872B29F40922003DBDF3 /* StatisticsView.swift in Sources */,
 				4C012E6D2944DAC300C9592C /* ChillEvent.swift in Sources */,
+				24CD2D3829F44B5400B6A508 /* ChillEventViewModel.swift in Sources */,
 				4C43E128294A1C7C00A11C06 /* ChooseHoursViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,9 +427,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,9 +437,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hse.Fuctivity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -381,9 +460,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,9 +470,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hse.Fuctivity;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -421,7 +503,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4CE07F8B2942751C001458C7 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+		4452781A29C6434900169BE2 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/richardtop/CalendarKit.git";
 			requirement = {
@@ -432,9 +514,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4CE07F8C2942751C001458C7 /* CalendarKit */ = {
+		4452781B29C6434900169BE2 /* CalendarKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4CE07F8B2942751C001458C7 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			package = 4452781A29C6434900169BE2 /* XCRemoteSwiftPackageReference "CalendarKit" */;
 			productName = CalendarKit;
 		};
 /* End XCSwiftPackageProductDependency section */
