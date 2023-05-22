@@ -29,10 +29,10 @@ class UserViewModel{
 
         }
         else{
-            //currentUser.setLoggedIn(logIn: true)
-            //UserDefaults.standard.set(true, forKey: "loggedIn")
-           currentUser.setLoggedIn(logIn: false)
-           UserDefaults.standard.set(false, forKey: "loggedIn")
+            currentUser.setLoggedIn(logIn: true)
+            UserDefaults.standard.set(true, forKey: "loggedIn")
+//           currentUser.setLoggedIn(logIn: false)
+//           UserDefaults.standard.set(false, forKey: "loggedIn")
         }
     }
     
