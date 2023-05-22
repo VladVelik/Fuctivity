@@ -79,6 +79,117 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2404293E2A1BA3610019FBB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				441C1C8329F3087F002E4661 /* RootViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2404293F2A1BA3710019FBB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				441C1C7E29F2FB48002E4661 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		240429402A1BA3780019FBB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C43E11D294A1C4500A11C06 /* MainViewController.swift */,
+				4C43E11F294A1C5700A11C06 /* RegisterViewController.swift */,
+				4C43E121294A1C6100A11C06 /* LogInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		240429412A1BA37E0019FBB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				441C1C8029F2FBF0002E4661 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		240429422A1BA3B40019FBB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				441C1C8629F30E78002E4661 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		240429432A1BA3BD0019FBB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C43E123294A1C6A00A11C06 /* DayChooseViewController.swift */,
+				4C43E125294A1C7400A11C06 /* ChooseRestViewController.swift */,
+				4C43E127294A1C7C00A11C06 /* ChooseHoursViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		240429442A1BA3C30019FBB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				441C1C8829F30F5B002E4661 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		240429452A1BA3EA0019FBB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CE07F892942720B001458C7 /* CalendarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		240429462A1BA3F20019FBB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */,
+				24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		240429472A1BA4180019FBB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CD51F9A2945D863007581CF /* ReminderViewController.swift */,
+				4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */,
+				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		240429482A1BA41F0019FBB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		240429492A1BA4670019FBB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				72E5872C29F40953003DBDF3 /* StatisticsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2404294A2A1BA46F0019FBB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72E5872A29F40922003DBDF3 /* StatisticsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		245A693029F324AA00179222 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +202,9 @@
 		441C1C7D29F2FB26002E4661 /* RegisterAndSignInModule */ = {
 			isa = PBXGroup;
 			children = (
-				441C1C7E29F2FB48002E4661 /* User.swift */,
-				4C43E11D294A1C4500A11C06 /* MainViewController.swift */,
-				4C43E11F294A1C5700A11C06 /* RegisterViewController.swift */,
-				4C43E121294A1C6100A11C06 /* LogInViewController.swift */,
-				441C1C8029F2FBF0002E4661 /* UserViewModel.swift */,
+				2404293F2A1BA3710019FBB5 /* Model */,
+				240429402A1BA3780019FBB5 /* View */,
+				240429412A1BA37E0019FBB5 /* ViewModel */,
 			);
 			path = RegisterAndSignInModule;
 			sourceTree = "<group>";
@@ -103,7 +212,7 @@
 		441C1C8229F30868002E4661 /* RootModule */ = {
 			isa = PBXGroup;
 			children = (
-				441C1C8329F3087F002E4661 /* RootViewController.swift */,
+				2404293E2A1BA3610019FBB5 /* View */,
 			);
 			path = RootModule;
 			sourceTree = "<group>";
@@ -111,11 +220,9 @@
 		441C1C8529F30B8E002E4661 /* SettingsModule */ = {
 			isa = PBXGroup;
 			children = (
-				4C43E123294A1C6A00A11C06 /* DayChooseViewController.swift */,
-				4C43E125294A1C7400A11C06 /* ChooseRestViewController.swift */,
-				4C43E127294A1C7C00A11C06 /* ChooseHoursViewController.swift */,
-				441C1C8629F30E78002E4661 /* SettingsViewModel.swift */,
-				441C1C8829F30F5B002E4661 /* Settings.swift */,
+				240429442A1BA3C30019FBB5 /* Model */,
+				240429432A1BA3BD0019FBB5 /* View */,
+				240429422A1BA3B40019FBB5 /* ViewModel */,
 			);
 			path = SettingsModule;
 			sourceTree = "<group>";
@@ -133,7 +240,7 @@
 		4C012E73294528B800C9592C /* CalendarModule */ = {
 			isa = PBXGroup;
 			children = (
-				4CE07F892942720B001458C7 /* CalendarViewController.swift */,
+				240429452A1BA3EA0019FBB5 /* View */,
 			);
 			path = CalendarModule;
 			sourceTree = "<group>";
@@ -174,8 +281,8 @@
 		72E5872929F408C6003DBDF3 /* StatisticsModule */ = {
 			isa = PBXGroup;
 			children = (
-				72E5872A29F40922003DBDF3 /* StatisticsView.swift */,
-				72E5872C29F40953003DBDF3 /* StatisticsViewModel.swift */,
+				2404294A2A1BA46F0019FBB5 /* View */,
+				240429492A1BA4670019FBB5 /* ViewModel */,
 			);
 			path = StatisticsModule;
 			sourceTree = "<group>";
@@ -183,12 +290,9 @@
 		72E5873029F58995003DBDF3 /* CreateNewEventModule */ = {
 			isa = PBXGroup;
 			children = (
-				4C012E6C2944DAC300C9592C /* ChillEvent.swift */,
-				24CD2D3729F44B5400B6A508 /* ChillEventViewModel.swift */,
-				24CD2D3929F4677500B6A508 /* ReminderViewModel.swift */,
-				4CD51F9A2945D863007581CF /* ReminderViewController.swift */,
-				4C012E702944F04000C9592C /* CategoryDescriptionViewController.swift */,
-				4C012E682944A53800C9592C /* ChillHourViewController.swift */,
+				240429482A1BA41F0019FBB5 /* Model */,
+				240429472A1BA4180019FBB5 /* View */,
+				240429462A1BA3F20019FBB5 /* ViewModel */,
 			);
 			path = CreateNewEventModule;
 			sourceTree = "<group>";
