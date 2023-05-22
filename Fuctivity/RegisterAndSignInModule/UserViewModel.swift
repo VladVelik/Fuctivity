@@ -13,6 +13,9 @@ class UserViewModel{
     static public var shared = UserViewModel()
     private(set) var currentUser: User = User()
     
+    var delegate: UpdateRootController?
+
+    
     init() {
         downloadEvents()
     }
@@ -22,12 +25,14 @@ class UserViewModel{
         if currentUser.getUsername() == username && currentUser.getHashPassword() == hashpassword && currentUser.getEmail() == email {
             currentUser.setLoggedIn(logIn: true)
             UserDefaults.standard.set(true, forKey: "loggedIn")
+            delegate?.setCalendarController()
+
         }
         else{
-            currentUser.setLoggedIn(logIn: true)
-            UserDefaults.standard.set(true, forKey: "loggedIn")
-//            currentUser.setLoggedIn(logIn: false)
-//            UserDefaults.standard.set(false, forKey: "loggedIn")
+            //currentUser.setLoggedIn(logIn: true)
+            //UserDefaults.standard.set(true, forKey: "loggedIn")
+           currentUser.setLoggedIn(logIn: false)
+           UserDefaults.standard.set(false, forKey: "loggedIn")
         }
     }
     
@@ -39,6 +44,7 @@ class UserViewModel{
         if username.isEmpty || password.isEmpty || email.isEmpty{
             return
         }
+        delegate?.setCalendarController()
         let hashpassword = passwordHash(email: email, password: password)
         UserDefaults.standard.set(true, forKey: "loggedIn")
         UserDefaults.standard.set(username, forKey: "username")

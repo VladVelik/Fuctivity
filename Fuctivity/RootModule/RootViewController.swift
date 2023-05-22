@@ -1,3 +1,4 @@
+
 //
 //  RootViewController.swift
 //  Fuctivity
@@ -8,15 +9,16 @@
 import Foundation
 import UIKit
 
-class RootViewController: UIViewController{
+class RootViewController: UIViewController, UpdateRootController{
     private var current: UIViewController = UIViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if !UserDefaults.standard.bool(forKey: "loggedIn"){
+        UserViewModel.shared.delegate = self
+
+        if     !UserDefaults.standard.bool(forKey: "loggedIn"){
             current = MainViewController()
-        }
+                    }
         else{
             current = CalendarViewController()
         }
@@ -27,4 +29,22 @@ class RootViewController: UIViewController{
         current.didMove(toParent: self)
         
     }
+    
+    func setCalendarController() {
+        current.willMove(toParent: nil)
+        current.view.removeFromSuperview()
+        current.removeFromParent()
+        let new = UINavigationController(rootViewController: CalendarViewController())
+        addChild(new)
+        new.view.frame = view.bounds
+        view.addSubview(new.view)
+        new.didMove(toParent: self)
+        
+        current = new
+        
+    }
+}
+
+protocol UpdateRootController : AnyObject{
+    func setCalendarController();
 }
