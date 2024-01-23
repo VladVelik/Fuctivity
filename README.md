@@ -5,4 +5,4 @@
 
 ## Документация
 
-[Ссылка на архитектурный документ]([путь/к/документу.md](https://github.com/VladVelik/Fuctivity/blob/main/Arch_doc.docx.pdf))
+[Ссылка на архитектурный документ](https://github.com/VladVelik/Fuctivity/blob/main/Arch_doc.docx.pdf)
